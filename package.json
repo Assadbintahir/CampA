@@ -9,7 +9,9 @@
     "debug": "cross-env DEBUG=express:router:route,express:application,kibopush:* NODE_ENV=development nodemon --trace-sync-io server/app.js",
     "watch": "watchify client/src/app.js -t babelify -o client/public/js/bundle.js --debug --verbose",
     "build:react": "browserify client/src/app.js -o client/public/js/bundle.js -t [ babelify --presets [ es2015 react ] ]",
-    "test": "echo Testing is not yet implemented"
+    "test": "echo Testing is not yet implemented",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -47,7 +49,7 @@
     "fcm-node": "^1.2.1",
     "helmet": "^3.6.1",
     "isomorphic-fetch": "^2.2.1",
-    "jsonwebtoken": "^7.4.1",
+    "jsonwebtoken": "^8.0.0",
     "lodash": "^4.17.4",
     "lodash-node": "^2.4.1",
     "method-override": "^2.3.9",
@@ -82,12 +84,14 @@
     "watch": "^1.0.2",
     "watchify": "^3.9.0",
     "winston": "^2.3.1",
-    "winston-papertrail": "^1.0.5"
+    "winston-papertrail": "^1.0.5",
+    "snyk": "^1.165.1"
   },
   "devDependencies": {
     "body-parser": "^1.17.2",
     "cross-env": "^5.0.1",
     "eslint-config-rallycoding": "^3.2.0",
     "nodemon": "^1.11.0"
-  }
+  },
+  "snyk": true
 }
