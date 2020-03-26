@@ -52,7 +52,7 @@
     "lodash-node": "^2.4.1",
     "method-override": "^2.3.9",
     "moment": "^2.18.1",
-    "mongoose": "^4.11.4",
+    "mongoose": "^5.3.9",
     "morgan": "^1.8.2",
     "needle": "^1.6.0",
     "passport": "~0.2.0",
